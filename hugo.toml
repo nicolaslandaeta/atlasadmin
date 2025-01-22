@@ -1,11 +1,11 @@
-baseURL = 'https://www.atlasadmin.cl/'
+baseURL = 'https://nicolaslandaeta.github.io/atlasadmin/'
 languageCode = 'es'
 title = 'Atlas Administración'
 
 disableKinds = ['taxonomy', 'term']
 
 [params]
-    description = "Servicios profesionales de administración"
+    description = "Oficina de Administración"
 
 [menu]
     [[menu.main]]
