@@ -50,6 +50,38 @@ a {
   backdrop-filter: blur(8px);
 }
 
+.nav-item {
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item:hover::after {
+  width: 80%;
+}
+
+.nav-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1rem;
+  background: var(--bgSoft);
+}
+
 .logo {
   font-weight: bold;
   font-size: 24px;
@@ -291,6 +323,39 @@ a {
   background-color: var(--bgSoft);
 }
 
+/* PDF Link Tooltip */
+.tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bgSoft);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: var(--bgSoft);
+}
+
+.social-icon:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: -40px;
+}
+
 /* Screen reader only text */
 .sr-only {
   position: absolute;
@@ -346,6 +411,28 @@ a {
     max-width: 768px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .nav-item:not(:last-child)::before {
+    display: none;
+  }
+  
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--bgSoft);
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .nav-item::after {
+    display: none;
+  }
+
+  .nav-item:hover {
+    background: var(--bgSoft);
   }
 
   .burger-menu {
