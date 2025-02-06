@@ -73,7 +73,7 @@ a {
 }
 
 .nav-item::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -89,7 +89,7 @@ a {
 }
 
 .nav-item:not(:last-child)::before {
-  content: '';
+  content: "";
   position: absolute;
   right: -10px;
   top: 50%;
@@ -137,7 +137,10 @@ a {
 /* Hero Section */
 .hero {
   height: calc(100vh - 100px);
-  background-image: linear-gradient(rgba(11, 21, 41, 0.3), rgba(11, 21, 41, 0.6)),
+  background-image: linear-gradient(
+      rgba(11, 21, 41, 0.3),
+      rgba(11, 21, 41, 0.6)
+    ),
     url("/images/logo.svg");
   background-size: cover;
   background-position: center;
@@ -194,7 +197,7 @@ a {
 }
 
 .tooltip::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -4px;
   left: 50%;
@@ -202,6 +205,12 @@ a {
   width: 8px;
   height: 8px;
   background: var(--bgSoft);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .social-icon:hover .tooltip {
@@ -217,7 +226,7 @@ a {
     padding-left: 20px;
     padding-right: 20px;
   }
-  
+
   .burger-menu {
     display: block;
   }
