@@ -1,81 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 	<meta name="generator" content="Hugo 0.143.1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Atlas Administración - Servicio de administración de condominios y edificios">
+    <title>Atlas Administración</title>
     <link rel="stylesheet" href="/styles/style.css">
-    <title>Atlas Administración | Administración de Condominios y Edificios</title>
 </head>
-<body class="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100">
-    <div class="container mx-auto px-4">
-        <nav class="navbar">
-  <div class="logo">
-    <a href="#home">Atlas</a>
-  </div>
-
-  <button id="burger-menu" class="burger-menu" aria-label="Menu">
-    <span class="burger-line"></span>
-    <span class="burger-line"></span>
-    <span class="burger-line"></span>
-  </button>
-
-  <div class="links" id="nav-links">
-    <div class="nav-item"><a href="#vision">Visión</a></div>
-    <div class="nav-item"><a href="#values">Valores</a></div>
-    <div class="nav-item"><a href="#services">Servicios</a></div>
-    <div class="nav-item"><a href="#team">Equipo</a></div>
-    <div class="nav-item"><a href="#contact">Contacto</a></div>
-  </div>
-</nav>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burgerMenu = document.getElementById("burger-menu");
-    const navLinks = document.getElementById("nav-links");
-
-    function toggleMenu() {
-      burgerMenu.classList.toggle("active");
-      navLinks.classList.toggle("show");
-      document.body.classList.toggle("menu-open");
-    }
-
-    burgerMenu.addEventListener("click", toggleMenu);
-
+<body>
+    <div class="container">
+        <header class="navbar">
+    <div class="logo">
+        <a href="/">Atlas Admin</a>
+    </div>
     
-    document.querySelectorAll(".nav-item a").forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          toggleMenu(); 
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
+    <button class="burger-menu" aria-label="Toggle menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
 
-    
-    document.addEventListener("click", function (e) {
-      if (
-        !burgerMenu.contains(e.target) &&
-        !navLinks.contains(e.target) &&
-        navLinks.classList.contains("show")
-      ) {
-        toggleMenu();
-      }
-    });
-
-    
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && navLinks.classList.contains("show")) {
-        toggleMenu();
-      }
-    });
-  });
-</script>
-
-        <main class="py-8">
+    <nav class="links">
+        <div class="nav-item">
+            <a href="#services">Services</a>
+        </div>
+        <div class="nav-item">
+            <a href="#about">About</a>
+        </div>
+        <div class="nav-item">
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-item">
+            <a href="https://client.atlasadmin.com" target="_blank" rel="noopener noreferrer">Client Portal</a>
+        </div>
+    </nav>
+</header>
+        <main>
             
 
 <section id="home" class="hero">
@@ -233,36 +193,108 @@
 </section>
 
         </main>
-        <div class="footer">
-  <div class="footerLinks">
-    <a href="#home">Atlas Administración</a> |
-    <a href="#services">Servicios</a> |
-    <a href="#contact">Contacto</a>
-  </div>
-  <div class="social">
-    
-    <a href="mailto:hola@atlasadmin.cl" aria-label="Enviar correo" class="social-icon">
-      <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-
-    
-    <a href="/docs/brochure.pdf" 
-       target="_blank" 
-       aria-label="Ver brochure" 
-       class="social-icon pdf-link"
-       id="pdf-link">
-      <div class="icon-wrapper">
-        <svg class="pdf-icon" width="24px" height="24px" viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-          <path d="M499.123,158.55a1,1,0,0,0-.914-.122L488.85,161.8l-9.36-3.377a.991.991,0,0,0-.679,0l-9.7,3.5a1,1,0,0,0-.66.941v21.762a1,1,0,0,0,1.34.941l9.359-3.377,9.36,3.377a.991.991,0,0,0,.679,0l9.7-3.5a1,1,0,0,0,.66-.941V159.369A1,1,0,0,0,499.123,158.55Z" transform="translate(-468 -156)"/>
-        </svg>
-        <div class="loading-spinner"></div>
-      </div>
-      <span class="tooltip">Ver brochure</span>
-    </a>
-  </div>
-</div>
+        <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Atlas Admin</h3>
+            <p>Empowering businesses with efficient administrative solutions.</p>
+            <p>Calle Falsa 123, Madrid, Spain</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Phone: +34 912 345 678</p>
+            <p>Email: info@atlasadmin.com</p>
+            <p>Hours: Monday - Friday, 9:00 - 18:00</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Resources</h3>
+            <div class="pdf-wrapper">
+                <a href="/docs/brochure.pdf" class="pdf-link" download>
+                    <span class="icon-wrapper">
+                        <svg class="pdf-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V9L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13 2V9H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="loading-spinner"></div>
+                    </span>
+                    <span class="tooltip">Download Services Brochure</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://linkedin.com/company/atlasadmin" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="tooltip">LinkedIn</span>
+                </a>
+            </div>
+        </div>
     </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Atlas Admin. All rights reserved.</p>
+    </div>
+</footer>
+    </div>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navLinks = document.querySelector('.links');
+            
+            burgerMenu?.addEventListener('click', function() {
+                burgerMenu.classList.toggle('active');
+                navLinks.classList.toggle('show');
+                document.body.classList.toggle('menu-open');
+            });
+
+            
+            document.addEventListener('click', function(e) {
+                if (!burgerMenu?.contains(e.target) && !navLinks?.contains(e.target)) {
+                    burgerMenu?.classList.remove('active');
+                    navLinks?.classList.remove('show');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        burgerMenu?.classList.remove('active');
+                        navLinks?.classList.remove('show');
+                        document.body.classList.remove('menu-open');
+                    }
+                });
+            });
+
+            
+            const pdfLinks = document.querySelectorAll('.pdf-link');
+            pdfLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    this.classList.add('loading');
+                    
+                    setTimeout(() => {
+                        this.classList.remove('loading');
+                    }, 1000);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
