@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <meta name="title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+    
+    <!-- LinkedIn Meta Tags -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.jpg">
+    <meta property="og:site_name" content="Atlas Administración">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ "styles/style.css" | relURL }}">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" aria-label="Apple Touch Icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="{{ "styles/style.css" | relURL }}" as="style">
+    
+    <!-- Security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self'; connect-src 'self' https://www.linkedin.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Atlas Administración",
+        "url": "{{ .Site.BaseURL }}",
+        "logo": "{{ .Site.BaseURL }}images/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+56-9-4254-3621",
+            "contactType": "customer service",
+            "email": "hola@atlasadmin.cl"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/atlasadmin"
+        ]
+    }
+    </script>
+</head>
