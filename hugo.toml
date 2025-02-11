@@ -18,7 +18,6 @@ copyright = "Atlas Administración © 2024. Todos los derechos reservados."
     unsafe = true
 
 [build]
-    writeStats = true
     command = "git submodule update --init --recursive"
 
 [minify]

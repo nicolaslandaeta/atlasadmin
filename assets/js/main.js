@@ -1,40 +1,37 @@
-// Initialize mobile menu functionality
-function initMobileMenu() {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const navLinks = document.querySelector('.links');
-    const body = document.body;
+const openButton = document.getElementById('open-sidebar-button')
+const navbar = document.getElementById('navbar')
 
-    if (!burgerMenu || !navLinks) return;
+const media = window.matchMedia('(width < 768px)')
 
-    function toggleMenu() {
-        burgerMenu.classList.toggle('active');
-        navLinks.classList.toggle('show');
-        body.classList.toggle('menu-open');
+media.addEventListener('change', (e) => updateNavbar(e))
+
+function updateNavbar(e) {
+    const isMobile = e.matches;
+    if(isMobile) {
+        navbar.setAttribute('inert', '');
+    } else {
+        navbar.removeAttribute('inert');
     }
-
-    function closeMenu() {
-        burgerMenu.classList.remove('active');
-        navLinks.classList.remove('show');
-        body.classList.remove('menu-open');
-    }
-
-    burgerMenu.addEventListener('click', toggleMenu);
-
-    document.addEventListener('click', (e) => {
-        if (!burgerMenu.contains(e.target) && !navLinks.contains(e.target)) {
-            closeMenu();
-        }
-    });
-
-    // Close menu on ESC key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeMenu();
-    });
-
-    return { closeMenu };
 }
 
-// Initialize all functionality when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenu = initMobileMenu();
-});
+function openSidebar() {
+    navbar.classList.add('show')
+    openButton.setAttribute('aria-expanded', 'true')
+    navbar.removeAttribute('inert')
+}
+
+function closeSidebar() {
+    navbar.classList.remove('show')
+    openButton.setAttribute('aria-expanded', 'false')
+    navbar.setAttribute('inert')
+}
+
+const navLinks = document.querySelectorAll('nav a')
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        closeSidebar()
+    })
+})
+
+updateNavbar(media)

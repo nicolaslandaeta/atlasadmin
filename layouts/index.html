@@ -1,46 +1,75 @@
 {{ define "main" }}
 <!-- Hero Section -->
-<section id="home" class="hero">
+<section class="hero">
     <div class="container">
         <div class="hero-content">
             <h1>Atlas Administración</h1>
-            <p>Soluciones profesionales para su empresa</p>
+            <p>Gestionar todos los detalles de su comunidad es un trabajo titánico. Nuestro equipo de profesionales llevará esa carga por ustedes e impulsará el bienestar de su comunidad a la gama más alta.</p>
+            <a href="#contact" class="btn btn-primary">Contáctanos</a>
         </div>
     </div>
 </section>
 
+<!-- Feature Cards -->
+<div class="container">
+    <div class="feature-cards">
+        <div class="feature-card">
+            <img src="/images/64x64.svg" alt="Gestión Transparente">
+            <h3>Gestión Transparente</h3>
+            <p>Informes mensuales detallados y documentación digital disponible 24/7</p>
+        </div>
+        <div class="feature-card">
+            <img src="/images/64x64.svg" alt="Comunicación Efectiva">
+            <h3>Comunicación Efectiva</h3>
+            <p>Sistema de tickets para seguimiento de requerimientos</p>
+        </div>
+        <div class="feature-card">
+            <img src="/images/64x64.svg" alt="Mejora Continua">
+            <h3>Mejora Continua</h3>
+            <p>Proyectos que agregan valor a su comunidad</p>
+        </div>
+    </div>
+</div>
+
 <!-- Vision Section -->
-<section id="vision" class="section">
+<section id="vision" class="section vision-section">
     <div class="container">
-        <div class="section-content">
-            <h2 class="section-title">Nuestra Visión</h2>
-            <div class="grid-2">
-                <p>
-                    Ser referentes nacionales en la administración de condominios a través del
-                    diseño de planes de trabajo integrando como eje central las necesidades
-                    específicas de nuestras comunidades y articular proyectos que agreguen
-                    valor e impacten su plusvalía.
-                </p>
-                <p>
-                    Nuestro objetivo es simple pero poderoso: transformar espacios comunes en
-                    comunidades vivas, donde cada residente pueda sentirse en paz y
-                    respaldado. Sabemos que una comunidad sólida no se construye de la noche a
-                    la mañana, pero con dedicación y un enfoque personalizado, creamos
-                    entornos que brindan estabilidad, bienestar y crecimiento para todos sus
-                    integrantes.
-                </p>
+        <div class="vision-content">
+            <div class="vision-icon">
+                <img src="/images/64x64.svg" alt="Vision Icon">
+            </div>
+            <div class="vision-text">
+                <h2>Nuestra Visión</h2>
+                <p>Ser referentes nacionales en la administración de condominios a través del diseño de planes de trabajo integrando como eje central las necesidades específicas de nuestras comunidades y articular proyectos que agreguen valor e impacten su plusvalía.</p>
+                <p>En Atlas, creemos que una buena administración va más allá de la gestión diaria; se trata de comprender las necesidades de cada comunidad y actuar como un puente para mejorar la calidad de vida de todos sus integrantes.</p>
+            </div>
+            <div class="vision-image">
+                <!-- Image specification: 
+                     Size: 600x800px
+                     Content: Modern condominium at night
+                     Format: .jpg/.webp
+                     Optimization: Progressive loading -->
+                <img src="/images/600x400.svg" alt="Visión Atlas" class="section-image">
             </div>
         </div>
     </div>
 </section>
 
 <!-- Values Section -->
-<section id="values" class="section">
+<section id="values" class="section values-section">
     <div class="container">
-        <div class="section-content">
-            <h2 class="section-title">Nuestros Valores</h2>
-            <div class="grid-3">
-                <div class="value-card">
+        <div class="values-content">
+            <div class="values-icon">
+                <img src="/images/64x64.svg" alt="Values Icon">
+            </div>
+            <div class="values-text">
+                <h2>Nuestros Valores</h2>
+            </div>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <img src="/images/300x300.svg" alt="Comunicación" class="value-image">
+                <div class="value-content">
                     <h3>Canales de comunicación funcionales</h3>
                     <p>
                         Siéntase escuchado y ayúdenos a ayudarle. Nuestro sistema de contacto
@@ -49,90 +78,110 @@
                         todas sus necesidades.
                     </p>
                 </div>
-                <div class="value-card">
-                    <h3>Gestión transparente y dinámica</h3>
-                    <p>
-                        Reciba informes mensuales detallados acerca de las finanzas, reclamos,
-                        observaciones y gestiones de la administración. Ponemos a su
-                        disposición versiones digitales de todos los documentos de respaldo de
-                        nuestra gestióna través de nuestro sistema estandarizado para
-                        facilitar el proceso de revisión y auditoría 24/7.
-                    </p>
-                </div>
-                <div class="value-card">
-                    <h3>Proactividad y sentido de pertenencia</h3>
-                    <p>
-                        Nuestro valor central es ver a nuestras comunidades crecer y sentirnos
-                        parte de ella, por esto, además de darle la prioridad al
-                        funcionamiento óptimo del edificio, brindamos el servicio de
-                        planificación y ejecución de proyectos que mejoren a la comunidad e
-                        incrementen su plusvalía.
-                    </p>
-                </div>
+            </div>
+            <div class="value-card">
+                <h3>Gestión transparente y dinámica</h3>
+                <p>
+                    Reciba informes mensuales detallados acerca de las finanzas, reclamos,
+                    observaciones y gestiones de la administración. Ponemos a su
+                    disposición versiones digitales de todos los documentos de respaldo de
+                    nuestra gestióna través de nuestro sistema estandarizado para
+                    facilitar el proceso de revisión y auditoría 24/7.
+                </p>
+            </div>
+            <div class="value-card">
+                <h3>Proactividad y sentido de pertenencia</h3>
+                <p>
+                    Nuestro valor central es ver a nuestras comunidades crecer y sentirnos
+                    parte de ella, por esto, además de darle la prioridad al
+                    funcionamiento óptimo del edificio, brindamos el servicio de
+                    planificación y ejecución de proyectos que mejoren a la comunidad e
+                    incrementen su plusvalía.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Services Section -->
-<section id="services" class="section">
+<section id="services" class="section services-section">
     <div class="container">
-        <div class="section-content">
-            <h2 class="section-title">Servicios</h2>
-            <div class="grid-4">
-                <div class="service-card">
-                    <h3>Administración Financiera</h3>
-                    <p>Gestión eficiente de recursos financieros.</p>
+        <div class="services-header">
+            <h2>Nuestros Servicios</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <!-- Icon specification:
+                     Size: 80x80px
+                     Format: SVG
+                     Style: Two-tone, primary color -->
+                <div class="service-icon">
+                    <img src="/images/64x64.svg" alt="Proyectos">
                 </div>
-                <div class="service-card">
-                    <h3>Consultoría Empresarial</h3>
-                    <p>Asesoramiento estratégico para su negocio.</p>
+                <h3>Ejecución de proyectos de mejora</h3>
+                <p>Nos encargamos de elaborar, supervisar y administrar proyectos que atiendan de forma proactivas las necesidades de los residentes e revaloricen las unidades de su comunidad.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/images/64x64.svg" alt="Seguimiento">
                 </div>
-                <div class="service-card">
-                    <h3>Gestión de Proyectos</h3>
-                    <p>Planificación y ejecución de proyectos.</p>
+                <h3>Seguimiento a denuncias y observaciones</h3>
+                <p>Contamos con un sistema de tickets que permite asegurarnos de que todos los requerimientos sean ingresados en nuestro sistema para ser atendidos.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/images/64x64.svg" alt="Operación">
                 </div>
-                <div class="service-card">
-                    <h3>Optimización de Procesos</h3>
-                    <p>Mejora continua de operaciones.</p>
+                <h3>Atención por la operación diaria</h3>
+                <p>Inspeccionamos el trabajo y retroalimentamos al personal del edificio para cumplir con altos estándares de calidad.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/images/64x64.svg" alt="Transparencia">
                 </div>
+                <h3>Gestión Transparente</h3>
+                <p>Registramos nuestras actividades con atención al detalle y brindamos canales de revisión oportunos.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Team Section -->
-<section id="team" class="section">
+<section id="team" class="section team-section">
     <div class="container">
-        <div class="section-content">
-            <h2 class="section-title">Nuestro Equipo</h2>
-            <div class="grid-3">
-                <div class="team-member">
-                    <img
-                        src="/images/orlando.jpg"
-                        alt="Orlando Ramírez, director ejecutivo"
-                        class="member-image"
-                    />
+        <div class="team-header">
+            <h2>Equipo Directivo</h2>
+        </div>
+        <div class="team-grid">
+            <div class="team-member">
+                <!-- Image specification: 
+                     Size: 400x400px
+                     Format: .jpg/.webp
+                     Style: Professional headshot
+                     Background: Office/neutral -->
+                <img src="/images/orlando.jpg" alt="Orlando Ramírez" class="member-image">
+                <div class="member-info">
                     <h3>Orlando Ramírez</h3>
-                    <p>Director Ejecutivo</p>
+                    <p class="member-role">Co-fundador y Director Administrativo</p>
+                    <p class="member-desc">Con formación en ciencias, administrador certificado y gestor de proyectos, Orlando es el encargado de diseñar flujos de trabajo adaptados a cada comunidad que aseguren el cumplimiento de necesidades y requerimientos de la ley.</p>
                 </div>
-                <div class="team-member">
-                    <img
-                        src="/images/nicolas.jpg"
-                        alt="Nicolás Landaeta, gerente de operaciones"
-                        class="member-image"
-                    />
+            </div>
+            
+            <div class="team-member">
+                <img src="/images/nicolas.jpg" alt="Nicolás Landaeta" class="member-image">
+                <div class="member-info">
                     <h3>Nicolás Landaeta</h3>
-                    <p>Gerente de Operaciones</p>
+                    <p class="member-role">Co-fundador y Director Operativo</p>
+                    <p class="member-desc">Con formación como programador y amplia experiencia en operaciones de edificios, coordinación de personal, atención al detalle y sólidas habilidades blandas, Nicolás es el brazo ejecutor de Atlas.</p>
                 </div>
-                <div class="team-member">
-                    <img
-                        src="/images/alfonso.jpg"
-                        alt="Alfonso Fuentes"
-                        class="member-image"
-                    />
+            </div>
+            
+            <div class="team-member">
+                <img src="/images/alfonso.jpg" alt="Alfonso Fuentes" class="member-image">
+                <div class="member-info">
                     <h3>Alfonso Fuentes</h3>
-                    <p>Consultor Senior</p>
+                    <p class="member-role">Director de Calidad y Finanzas</p>
+                    <p class="member-desc">Con formación en administración de empresas y 15 años de experiencia en análisis de proyectos de construcción, Alfonso supervisará el flujo financiero en las operaciones y estará a cargo de validar y supervisar la calidad en las operaciones de Atlas.</p>
                 </div>
             </div>
         </div>
@@ -140,25 +189,101 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="section">
+<section id="contact" class="section contact-section">
     <div class="container">
-        <div class="section-content">
-            <h2>Contacto</h2>
-            <form action="/send-message" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Contacto</h2>
+                <p class="contact-subtitle">Estamos comprometidos con su bienestar</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Eulogia Sánchez 069, Providencia<br>Santiago, Chile</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+56 9 4254 3621</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hola@atlasadmin.cl</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <h3>Envíanos un mensaje</h3>
+                <form action="/send-message" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Connect with Us Section -->
+<section class="section connect-section">
+    <div class="container">
+        <div class="connect-header">
+            <h2>Connect with Us</h2>
+        </div>
+        <div class="connect-grid">
+            <div class="connect-card">
+                <img src="/images/64x64.svg" alt="Our Proven Expertise">
+                <h3>Our Proven Expertise</h3>
+                <p>Experiencia comprobada en administración de propiedades</p>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="connect-card">
+                <img src="/images/64x64.svg" alt="Enabling Your Investment">
+                <h3>Enabling Your Investment</h3>
+                <p>Maximizando el valor de su inversión</p>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="connect-card">
+                <img src="/images/64x64.svg" alt="Your Partner in Property">
+                <h3>Your Partner in Property</h3>
+                <p>Su socio confiable en administración</p>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
         </div>
     </div>
 </section>

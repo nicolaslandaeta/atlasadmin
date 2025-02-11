@@ -1,0 +1,1 @@
+const openButton=document.getElementById("open-sidebar-button"),navbar=document.getElementById("navbar"),media=window.matchMedia("(max-width: 700px)");function openSidebar(){navbar.classList.add("show"),openButton.setAttribute("aria-expanded","true")}function closeSidebar(){navbar.classList.remove("show"),openButton.setAttribute("aria-expanded","false")}
