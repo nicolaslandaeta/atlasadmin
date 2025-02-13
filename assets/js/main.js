@@ -23,7 +23,9 @@ function openSidebar() {
 function closeSidebar() {
     navbar.classList.remove('show')
     openButton.setAttribute('aria-expanded', 'false')
-    navbar.setAttribute('inert')
+    if(media.matches) {
+        navbar.setAttribute('inert')
+    }
 }
 
 const navLinks = document.querySelectorAll('nav a')
@@ -35,3 +37,26 @@ navLinks.forEach(link => {
 })
 
 updateNavbar(media)
+
+// Feature Cards Flip
+document.addEventListener('DOMContentLoaded', function() {
+    const featureCards = document.querySelectorAll('.feature-card');
+    
+    featureCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Solo activar en móvil
+            if (window.innerWidth <= 768) {
+                this.classList.toggle('flipped');
+            }
+        });
+    });
+
+    // Opcional: Resetear cards al cambiar tamaño de ventana
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            featureCards.forEach(card => {
+                card.classList.remove('flipped');
+            });
+        }
+    });
+});
