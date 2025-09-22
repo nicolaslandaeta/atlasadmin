@@ -1,0 +1,518 @@
+/* --- Variables y Estilos Globales --- */
+:root {
+    --primary-color: #009efd;
+    --dark-blue: #2c3e50;
+    --light-grey: #f4f4f4;
+    --text-color: #333;
+    --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+    padding-top: 73px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+/* --- SECCIÓN DE INICIO (INDEX) --- */
+#inicio {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1.3fr;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    position: relative;
+    background-color: #fff;
+    padding: 0;
+}
+
+#inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-blue);
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(30% 45%, 40% 70%, 17% 100%, -10% 100%);
+    z-index: 1;
+}
+
+#inicio::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% -30%, 40% 31%, 40% 70%, -10% 0%);
+    z-index: 1;
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: #e9ecef; /* Color de fondo para toda la barra sticky */
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex; /* Para centrar el contenedor interno */
+    justify-content: center; /* Centra el contenedor interno */
+    padding: 0; /* El padding se mueve al contenedor interno */
+}
+
+.navbar-inner-container { /* Nuevo contenedor para la forma y el contenido */
+    max-width: 1100px; /* Limita el ancho al contenido principal */
+    width: 100%; /* Ocupa el 100% del ancho de su padre hasta max-width */
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, enlaces a la derecha */
+    align-items: center;
+    padding: 1.5rem 2rem; /* Padding original */
+    background-color: #e9ecef; /* Color de fondo para la parte con clip-path */
+}
+
+.nav-right-items { /* Contenedor para los enlaces y la hamburguesa */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 1.5rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 25px;
+    margin-right: 8px;
+}
+
+.nav-red-link {
+    margin-left: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Contenido Central (INDEX) */
+.center-content {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+    align-self: center;
+}
+
+.main-logo {
+    width: 200px;
+    margin-bottom: 0.5rem;
+}
+
+.logo-subtitle {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+    padding-left: 7rem;
+}
+
+.main-slogan {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    font-weight: 400;
+    line-height: 1.2;
+    padding-left: 7rem ;
+}
+.main-slogan .vibrantes, .main-slogan strong {
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+/* Contenedor de Imágenes (INDEX) */
+.image-container {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+    align-self: center;
+}
+
+.image-box {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.top-image {
+    background-image: url('/images/chunifa-luthfi-aulia-kILtNxcLwzU-unsplash\ \(1\).jpg');
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.bottom-image {
+    background-image: url('/images/image.png');
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
+}
+
+/* --- SECCIONES POSTERIORES (INDEX) --- */
+#quienes-somos, #servicios, #contacto {
+    background-color: var(--light-grey);
+}
+.subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+}
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+.team-member { text-align: center; }
+.columns-container { display: flex; gap: 3rem; margin-top: 2rem; }
+.column { flex: 1; }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+.service-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    font-weight: bold;
+}
+.audit-section { text-align: center; margin-top: 2rem; }
+#contacto { background-color: var(--light-grey); }
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#contacto p { text-align: center; }
+.contact-form input, .contact-form textarea {
+    width: 100%; padding: 0.8rem; margin-bottom: 1rem;
+    border: 1px solid #ccc; border-radius: 5px; font-family: 'Montserrat', sans-serif;
+}
+.contact-form button {
+    background-color: var(--dark-blue); color: #fff; border: none; padding: 1rem;
+    border-radius: 5px; cursor: pointer; font-size: 1rem; font-weight: bold;
+    transition: background-color 0.3s;
+}
+.contact-form button:hover { background-color: var(--primary-color); }
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-blue); color: #fff;
+    text-align: center; padding: 1.5rem 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- ESTILOS PARA LA PÁGINA BTPC --- */
+.btpc-page .container {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.btpc-page .main-header {
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.btpc-page .header-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.btpc-page .slogan {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.btpc-page section {
+    margin-bottom: 4rem;
+}
+
+.btpc-page h2 {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.btpc-page section h2 {
+    display: block;
+}
+
+.btpc-page .protocol-card {
+    background: var(--light-grey);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.btpc-page .protocol-card h3 {
+    margin-top: 0;
+    color: var(--dark-blue);
+}
+
+.btpc-page .job-card {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.btpc-page .job-card:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.btpc-page .job-card img {
+    max-width: 350px;
+    object-fit: cover;
+}
+
+.btpc-page .job-info {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.btpc-page .job-info h3 {
+    color: var(--dark-blue);
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.btpc-page .job-info h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    border-bottom: 2px solid var(--light-grey);
+    padding-bottom: 5px;
+}
+
+.btpc-page .job-info ul {
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.btpc-page .job-details {
+    margin-top: 1rem;
+}
+
+.btpc-page .job-details p {
+    margin: 0.5rem 0;
+}
+
+.btpc-page .salary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.btpc-page .salary-table th, .btpc-page .salary-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.btpc-page .salary-table th {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+/* --- Responsividad --- */
+@media (max-width: 1024px) {
+    body {
+        padding-top: 0;
+    }
+
+    #inicio {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #inicio::before, #inicio::after {
+        display: none;
+    }
+
+    .navbar {
+        position: static;
+    }
+
+    .navbar-inner-container {
+        flex-direction: row;
+        justify-content: space-between;
+        clip-path: none;
+        padding: 1rem 2rem;
+        max-width: none;
+        position: relative;
+    }
+
+    .nav-right-items {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #e9ecef;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 0.5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        order: -1;
+    }
+
+    .center-content {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding: 4rem 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-subtitle, .main-slogan {
+        padding-left: 0;
+    }
+
+    .image-container {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .btpc-page .job-card, .btpc-page .job-card:nth-child(odd) {
+        flex-direction: column;
+    }
+    .btpc-page .job-card img {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .columns-container {
+        flex-direction: column;
+    }
+}
